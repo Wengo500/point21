@@ -1,0 +1,26 @@
+li {
+    cursor: pointer;
+}
+
+.crossed {
+    text-decoration: line-through;
+}
+
+.div1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.div2 {
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+}
+
+.div3 {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+}
+
