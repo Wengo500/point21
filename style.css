@@ -13,3 +13,10 @@
     background-color: red;
     margin-left: 1px;
 }
+
+.mouseclick {
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+
+}
