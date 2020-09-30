@@ -1,3 +1,7 @@
+body {
+    background: #000;
+}
+
 .horizontal {
     position: absolute;
     width: 100%;
@@ -18,5 +22,4 @@
     position: absolute;
     background-color: black;
     opacity: 0.5;
-
 }
