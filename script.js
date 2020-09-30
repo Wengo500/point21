@@ -28,4 +28,40 @@ function work() {
     })
 }
 
+function createDiv(e) {
+        const div2 = document.querySelector('.mouseclick');
+        let startX = e.clientX;
+        let startY = e.clientY;
+
+        const divMove = (e) => {
+            let moveX = e.clientX;
+            let moveY = e.clientY;
+
+            if(startX < moveX) {
+                div2.style.marginLeft = `${startX}px`;
+                div2.style.width = `${moveX - startX}px`;
+            } else {
+                div2.style.marginLeft = `${moveX}px`;
+                div2.style.width = `${startX - moveX}px`;
+            }
+
+            if(startY < moveY) {
+                div2.style.marginTop = `${startY}px`;
+                div2.style.height = `${moveY - startY}px`;
+            } else {
+                div2.style.marginTop = `${moveY}px`;
+                div2.style.height = `${startY - moveY}px`;
+            }
+        }
+
+        document.addEventListener('mousemove', divMove);
+
+        document.addEventListener('mouseup', () => {
+            div2.removeAttribute('style');
+            document.removeEventListener('mousemove', divMove);
+        })
+}
+
 work();
+
+document.addEventListener('mousedown', createDiv);
